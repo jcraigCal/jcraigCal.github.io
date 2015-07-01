@@ -4,38 +4,32 @@
 	</head>
 	
 	<body style="background-color:#906">
-		<div onmouseover="Makebold()" onmouseout="Makelight()" id="indexdiv" style="color:#B90; font-size:50pt;width:30%">
+		<div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="indexdiv" style="color:#B90; font-size:50pt;width:30%">
 			<a href="./index.html">Home</a>
 		</div>
 
-		<div onmouseover="Makebold()" onmouseout="Makelight()" id="Aboutmediv" style="color:#B90; font-size:50pt;width:30%">
+		<div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="Aboutmediv" style="color:#B90; font-size:50pt;width:30%">
 			<a href="./Aboutme.html">About Me</a>
 		</div>
 		
-		<div onmouseover="Makebold()" onmouseout="Makelight()" id="Resumediv" style="color:#B90; font-size:50pt;width:30%">
+		<div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="Resumediv" style="color:#B90; font-size:50pt;width:30%">
 			<a href="./resume.html">Resume</a>
 		</div>
 		
-		<div onmouseover="Makebold()" onmouseout="Makelight()" id="Thoughtsdiv" style="color:#B90; font-size:50pt;width:30%">
+		<div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="Thoughtsdiv" style="color:#B90; font-size:50pt;width:30%">
 			<a href="./thoughts.html">Thoughts</a>
 		</div>
  <script type="text/javascript">
         
 
-        function Makebold()
+        function Makebold(e)
     {
-        mydiv = document.getElementById('indexdiv')
-        mydiv = document.getElementById('Aboutmediv')
-        mydiv = document.getElementById('Resumediv')
-        mydiv = document.getElementById('Thoughtsdiv')
+        mydiv = e;
         mydiv.style.fontWeight = "900";
     }
-      function Makelight()
+      function Makelight(e)
     {
-        mydiv = document.getElementById('indexdiv')
-        mydiv = document.getElementById('Aboutmediv')
-        mydiv = document.getElementById('Resumediv')
-        mydiv = document.getElementById('Thoughtsdiv')
+        mydiv = e;
         mydiv.style.fontWeight = "100";
     }
     
