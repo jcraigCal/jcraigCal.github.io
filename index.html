@@ -3,14 +3,29 @@
 	<head>
 	<h1>This is the Home page</h1>
 <style type="text/css">
-body
- {
+body{
      background-color:#E60000;
      background-image: url(https://cloud.githubusercontent.com/assets/13125737/8688827/b3976138-2a6e-11e5-9ed0-e18d34d90e25.jpg);
      background-repeat: no-repeat;
      background-position:center center;
  }
  </style>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  </style>
+ <script>
+  $(function() {
+    $( "#selectable" ).selectable();
+  });
+  </script>
 	</head>
 <!-- End of head-->
 <!-- Start of the body -->
@@ -34,11 +49,7 @@ body
 	</div>
 <!-- End of div(s) placement -->
 <!-- Start of coding for the page (Interaction) -->
-<script>
-  $(function() {
-    $( "#selectable" ).selectable();
-  });
-  </script>
+
 <ol id="selectable">
   <li class="ui-widget-content">Item 1</li>
   <li class="ui-widget-content">Item 2</li>
