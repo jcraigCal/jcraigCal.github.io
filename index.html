@@ -17,34 +17,44 @@ body{
  li{
  	 font-size:10pt;
  }
- </style>
-   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <style>
   #feedback { font-size: 1.4em; }
   #selectable .ui-selecting { background: #FECA40; }
   #selectable .ui-selected { background: #F39814; color: white; }
   #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
   #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 50px; }
-  </style>
- <script>
-  $(function() {
-    $( "#selectable" ).selectable();
-  });
-  </script>
+ </style>
+ <!-- Start of script -->
+ <script type="text/javascript">
+        function Makebold(e)
+    {
+        mydiv = e;
+        mydiv.style.fontWeight = "900";
+    }
+      function Makelight(e)
+    {
+        mydiv = e;
+        mydiv.style.fontWeight = "100";
+    }
+    </script> 
+    
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script>
+    $(function() {
+    $( "#selectable" ).selectable();});
+    </script>
+<!--End of script -->
+  
 	</head>
 <!-- End of head-->
 <!-- Start of the body -->
 	<body>
 <!-- Start of div(s) placement -->
 	
-	
-	
-	
-	
 <!-- End of div(s) placement -->
 <!-- Start of coding for the page (Interaction) -->
-
 <ol id="selectable">
   <li class="ui-widget-content"><div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="indexdiv" style="color:#B90;width:30%">
 	<a href="./index.html">Home</a>
@@ -62,22 +72,7 @@ body{
 	<a href="ftp://ftp.0fees.us/htdocs/index.html">Johnathan Craig</a>
 	</div></li>
 </ol>
-
 <!-- End of coding for the page (Interaction) -->
-<!-- Start of script -->
- <script type="text/javascript">
-        function Makebold(e)
-    {
-        mydiv = e;
-        mydiv.style.fontWeight = "900";
-    }
-      function Makelight(e)
-    {
-        mydiv = e;
-        mydiv.style.fontWeight = "100";
-    }
-    </script> 
-<!--End of script -->
 	</body>
 <!-- End of body -->
 </html>
