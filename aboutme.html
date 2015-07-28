@@ -1,6 +1,39 @@
 <html>
 	<head>
 	<h1>This is the page that will be About Me</h1>
+	<script type="text/javascript">
+ function Makebold(e)
+    {
+        mydiv = e;
+        mydiv.style.fontWeight = "900";
+    }
+      function Makelight(e)
+    {
+        mydiv = e;
+        mydiv.style.fontWeight = "100";
+    }
+    </script>
+    <script>
+  $(function() {
+    var state = true;
+    $( "#button" ).click(function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  });
+  </script>
 	<style type="text/css">
 h1{
 		color:#FFCC00;
@@ -31,21 +64,16 @@ body
 		<div onmouseover="Makebold(this)" onmouseout="Makelight(this)" id="Thoughtsdiv" style="color:#B90; font-size:50pt;width:30%">
 			<a href="./thoughts.html">Thoughts</a>
 		</div>
- <script type="text/javascript">
-        
-
-        function Makebold(e)
-    {
-        mydiv = e;
-        mydiv.style.fontWeight = "900";
-    }
-      function Makelight(e)
-    {
-        mydiv = e;
-        mydiv.style.fontWeight = "100";
-    }
-    
-
-    </script>   
+ 
+  <div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Animate</h3>
+    <p>
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+    </p>
+  </div>
+</div>
+ 
+<button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
 	</body>
 </html>
