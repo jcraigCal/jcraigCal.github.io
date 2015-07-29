@@ -38,7 +38,6 @@ body{
     </script> 
     
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <script>
@@ -48,14 +47,19 @@ body{
     });
 });
     </script>
+    <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
 <!--End of script -->
 </head>
 <!-- End of head-->
 <!-- Start of the body -->
 <body>
-<!-- Start of div(s) placement -->
-	
-<!-- End of div(s) placement -->
+<!-- Start of date(s) placement -->
+<p>Date: <input type="text" id="datepicker"></p>	
+<!-- End of date(s) placement -->
 <!-- Start of coding for the page (Interaction) -->
 <ol id="selectable">
   <li class="ui-widget-content">
