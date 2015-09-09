@@ -116,22 +116,30 @@ line-height:10px;
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
  <script>
- function c(val)
-{
-document.getElementById("d").value = val;
+function c(val) {
+    document.getElementById("d").value = val;
 }
-function v(val) 
-{
- document.getElementById("d").value += val;
+
+function v(val) {
+    document.getElementById("d").value += val;
 }
-function e() 
-{
-try 
-{
-c(eval(document.getElementById("d").value)) } catch (e) 
-{
- c('Error')
+
+function e() {
+    try {
+        c(eval(document.getElementById("d").value))
+    } catch (e) {
+        c('Error')
+    }
 }
+function r(val){
+    $("#d").val(1/parseInt($("#d").val()));
+}
+
+function runsquared() {
+document.getElementById("d").value = document.getElementById("d").value * document.getElementById("d").value
+}
+function switching() {
+document.getElementById("d").value = document.getElementById("d").value * -1
 }
   </script>
 <!--End of script -->
@@ -145,11 +153,11 @@ c(eval(document.getElementById("d").value)) } catch (e)
         <input type="text" readonly size="18" id="d">
     </div>
     <div class="keys">
-        <p>
-            <input type="button" class="button gray" value="mrc" onclick='c("mrc")'>
-            <input type="button" class="button gray" value="m-" onclick='c("m-")'>
-            <input type="button" class="button gray" value="m+" onclick='c("m+")'>
-            <input type="button" class="button pink" value="/" onclick='v("/")'>
+          <p>
+<input type="button"class="button gray"value="1/x"onclick='r("reciprocal()")'>
+<input type="button" class="button gray" value="x²" onclick='runsquared()'>
+<input type="button" class="button gray" value="+/-" onclick ='switching()' >
+<input type="button" class="button pink" value="/" onclick='v("/")'>
         </p>
         <p>
             <input type="button" class="button black" value="7" onclick='v("7")'>
